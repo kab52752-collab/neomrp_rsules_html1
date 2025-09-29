@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>قوانين NEOM RP</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Tahoma", sans-serif;
+            background-color: #0e2a27;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            background-color: #123531;
+            width: 90%;
+            height: 90%;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .sidebar {
+            width: 25%;
+            background-color: #0b1f1d;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+        .sidebar button {
+            background-color: #1f3d3a;
+            border: none;
+            color: white;
+            padding: 15px;
+            margin: 5px 0;
+            font-size: 18px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .sidebar button:hover {
+            background-color: #295752;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        h1 {
+            text-align: center;
+            color: #f0f0f0;
+        }
+    </style>
+    <script>
+        function showContent(id) {
+            let sections = document.querySelectorAll(".section");
+            sections.forEach(section => section.style.display = "none");
+            document.getElementById(id).style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <button onclick="showContent('general')">القوانين العامة</button>
+            <button onclick="showContent('playing')">القوانين الخاصة باللعب</button>
+            <button onclick="showContent('life')">الجزء الخاص بتقدير الحياة</button>
+            <button onclick="showContent('vehicles')">الجزء الخاص بقيادة المركبات</button>
+            <button onclick="showContent('crime')">قوانين وشروط الإجرام</button>
+            <button onclick="showContent('safezones')">المناطق الآمنة</button>
+            <button onclick="showContent('complaints')">الشكاوي والتعويض</button>
+        </div>
+        <div class="content">
+            <h1>قوانين NEOM RP</h1>
+            
+            <div id="general" class="section">
+                <h2>القوانين العامة</h2>
+                <p>يجب أن يكون عمرك 16 عام أو أكبر مع وجود مايك واضح.</p>
+                <p>يمنع استخدام برامج تعديل الأصوات.</p>
+                <p>يجب وضع اسم وتاريخ ميلاد وجنسية واقعية للشخصية.</p>
+                <p>يمنع استخدام الشخصيات الجاهزة ويجب تعديل الشخصية وأخذ وقت في إنشائها.</p>
+                <p>يمنع استخدام Stream Snipe أو Meta Gaming.</p>
+                <p>يمنع استخدام الغش أو استغلال الثغرات.</p>
+                <p>يمنع العنصرية بجميع أنواعها والحقد والشخصنة.</p>
+                <p>يمنع القتل في المناطق الحيوية.</p>
+                <p>يمنع نقل الأموال أو الأغراض بين الشخصيات.</p>
+            </div>
+            
+            <div id="playing" class="section" style="display:none;">
+                <h2>القوانين الخاصة باللعب</h2>
+                <p>تقمص الشخصية واحترام العسكري والمسعف واجب.</p>
+                <p>يمنع VDM (دهس عشوائي) و RDM (قتل عشوائي).</p>
+            </div>
+            
+            <div id="life" class="section" style="display:none;">
+                <h2>الجزء الخاص بتقدير الحياة</h2>
+                <p>يجب تقدير حياتك وحياة الآخرين.</p>
+                <p>لا يمكنك مقاومة شخص موجه عليك سلاح.</p>
+                <p>يمنع قتل الرهائن أثناء تنفيذ الأوامر.</p>
+            </div>
+            
+            <div id="vehicles" class="section" style="display:none;">
+                <h2>الجزء الخاص بقيادة المركبات</h2>
+                <p>يمنع صعود الجبال إلا بمركبات مخصصة.</p>
+                <p>يمنع قيادة المركبة بعد حادث أو إذا كانت تالفة.</p>
+                <p>يمنع القيادة في أماكن غير مخصصة مثل السكة الحديدية.</p>
+            </div>
+            
+            <div id="crime" class="section" style="display:none;">
+                <h2>قوانين وشروط الإجرام</h2>
+                <p>يجب التقيد بعدد الشرطة المتواجدين قبل الجريمة.</p>
+                <p>يمنع خطف الرهائن لأكثر من 25 دقيقة.</p>
+                <p>يمنع دخول العقارات أثناء المطاردة.</p>
+                <p>يمنع الهروب من رجال الأمن دون سبب مقنع.</p>
+            </div>
+            
+            <div id="safezones" class="section" style="display:none;">
+                <h2>المناطق الآمنة</h2>
+                <p>المستشفى – مراكز الشرطة – المعارض – الورش – مناطق العمل – الميناء – المنجم – مناطق الفعاليات.</p>
+            </div>
+            
+            <div id="complaints" class="section" style="display:none;">
+                <h2>الشكاوي والتعويض</h2>
+                <p>لا تقبل الشكوى أو طلب التعويض إلا بمقطع يوضح المشكلة كاملة.</p>
+                <p>يجب التواصل مع الإدارة عن طريق التذاكر.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
